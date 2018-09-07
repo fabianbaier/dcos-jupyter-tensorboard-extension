@@ -1,8 +1,16 @@
 """
 Setup module for the dcos_jupyter_tensorboard_extension
 """
-import setuptools
+from __future__ import print_function
+from setuptools import setup, Command
+from setuptools.command.sdist import sdist
+from setuptools.command.build_py import build_py
+from setuptools.command.egg_info import egg_info
+from subprocess import check_call
+import glob
 import os
+import sys
+from os.path import join as pjoin
 from setupbase import (
     create_cmdclass, ensure_python, find_packages
     )
