@@ -2,6 +2,7 @@
 Setup module for the dcos_jupyter_tensorboard_extension
 """
 import setuptools
+import os
 from setupbase import (
     create_cmdclass, ensure_python, find_packages
     )
