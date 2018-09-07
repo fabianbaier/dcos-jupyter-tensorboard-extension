@@ -1,7 +1,7 @@
 {
     "NotebookApp": {
       "nbserver_extensions": {
-        "serverextension.dcos_jupyter_tensorboard_serverextension": true
+        "dcos_jupyter_tensorboard_serverextension": true
       }
    }
 }
