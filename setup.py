@@ -15,14 +15,17 @@ from os.path import join as pjoin
 from setupbase import (
     create_cmdclass, ensure_python, find_packages
     )
+from distutils.sysconfig import get_python_lib; 
 
 here = os.path.dirname(os.path.abspath(__file__))
 node_root = pjoin(here, 'labextension', 'dcos-jupter-tensorboard-labextension')
+python-lib = get_python_lib()
 
 data_files_spec = [
     ('etc/jupyter/jupyter_notebook_config.d',
      'serverextension', 'dcos_jupyter_tensorboard_serverextension.json'),
-     ('share/jupyter/lab/extensions',
+     (python-lib, 'serverextension', 'dcos_jupyter_tensorboard_serverextension'),
+    ('share/jupyter/lab/extensions',
      'labextension', 'dcos_jupyter_tensorboard_serverextension.json'),
 ]
 
