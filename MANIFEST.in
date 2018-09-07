@@ -1,0 +1,11 @@
+include README.md
+include setupbase.py
+include serverextension/dcos_jupyter_tensorboard_serverextension/__init__.py
+recursive-include serverextension *.json
+
+# Patterns to exclude from any directory
+global-exclude *~
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude .git
+global-exclude .ipynb_checkpoints
