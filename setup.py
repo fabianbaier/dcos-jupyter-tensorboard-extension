@@ -2,6 +2,7 @@
 Setup module for the dcos_jupyter_tensorboard_extension
 """
 from __future__ import print_function
+import setuptools
 from setuptools import setup, Command
 from setuptools.command.sdist import sdist
 from setuptools.command.build_py import build_py
