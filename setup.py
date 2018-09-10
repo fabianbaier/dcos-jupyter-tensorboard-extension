@@ -21,15 +21,15 @@ here = os.path.dirname(os.path.abspath(__file__))
 node_root = pjoin(here, 'labextension', 'dcos-jupter-tensorboard-labextension')
 python_lib = get_python_lib()
 
-data_files_spec = [
-    ('etc/jupyter/jupyter_notebook_config.d',
-     'serverextension', 'dcos_jupyter_tensorboard_serverextension.json'),
-     (python_lib, 'serverextension', 'dcos_jupyter_tensorboard_serverextension'),
-    ('share/jupyter/lab/extensions',
-     'labextension', 'dcos_jupyter_tensorboard_serverextension.json'),
-]
+#data_files_spec = [
+#    ('etc/jupyter/jupyter_notebook_config.d',
+#     'serverextension', 'dcos_jupyter_tensorboard_serverextension.json'),
+#     (python_lib, 'serverextension', 'dcos_jupyter_tensorboard_serverextension'),
+#    ('share/jupyter/lab/extensions',
+#     'labextension', 'dcos_jupyter_tensorboard_serverextension.json'),
+#]
 
-cmdclass = create_cmdclass(data_files_spec=data_files_spec)
+#cmdclass = create_cmdclass(data_files_spec=data_files_spec)
 
 class NPM(Command):
     description = 'install package.json dependencies using npm'
@@ -93,7 +93,6 @@ setup_dict = dict(
     name='dcos_jupyter_tensorboard_extension',
     description='A Jupyter & JupyterLab extension which acts a proxy for the TensorBoard UI',
     packages=find_packages(),
-    cmdclass=cmdclass,
     author          = 'Fabian Baier',
     author_email    = 'fabian@mesophere.com',
     url             = 'https://github.com/fabianbaier/dcos-jupyter-tensorboard-extension',
