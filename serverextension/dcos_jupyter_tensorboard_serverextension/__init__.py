@@ -1,7 +1,12 @@
 import os
 
-__version__ = '0.0.1'
+from pkg_resources import get_distribution, DistributionNotFound
 
+try:
+    __version__ = get_distribution(__name__).version
+except DistributionNotFound:
+    # package is not installed
+    pass
 
 def load_jupyter_server_extension(nb_server_app):
     """
